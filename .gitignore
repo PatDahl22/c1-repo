@@ -1,4 +1,39 @@
-a.out
+cat << 'EOF' > .gitignore
+# -------------------------------
+# C/C++ build artifacts
+# -------------------------------
+*.o
+*.out
+*.exe
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+
+# Körbara filer (Linux)
 main
 demo
+a.out
+
+# Debug/Log
+*.log
+*.dSYM/
+*.stackdump
+
+# -------------------------------
+# VS Code settings
+# -------------------------------
 .vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# -------------------------------
+# OS-generated files
+# -------------------------------
+.DS_Store
+Thumbs.db
+EOF
